@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeLoan AI — Next-Gen Credit Risk Predictor</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Background Lights -->
+    <div class="bg-glow bg-glow-purple"></div>
+    <div class="bg-glow bg-glow-cyan"></div>
+
+    <!-- Navigation Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="logoGrad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#22d3ee" />
+                            <stop offset="1" stop-color="#a855f7" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>LuxeLoan <span class="text-gradient">AI</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#predictor" class="nav-btn active">Predictor</a>
+                <a href="#features" class="nav-btn">Features</a>
+                <a href="https://github.com" target="_blank" class="nav-btn github">
+                    <span>GitHub</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Next-Gen Credit Risk & <br><span class="text-gradient">Loan Prediction Engine</span></h1>
+            <p class="hero-subtitle">
+                Harnessing production-level Random Forest ML pipelines to determine loan approvals, evaluate structural asset ratios, and assess credit CIBIL ratings in real-time.
+            </p>
+
+            <!-- Feature Cards Grid -->
+            <div class="features-grid" id="features">
+                <div class="glass-card feature-card">
+                    <div class="feature-icon font-cyan">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3>98.36% Accuracy</h3>
+                    <p>Trained and validated on highly-stratified folds for rock-solid predictive integrity.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon font-purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+                    </div>
+                    <h3>Multi-Asset Analysis</h3>
+                    <p>Evaluates commercial, luxury, and residential assets side-by-side to understand cover margins.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon font-pink">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Secure Processing</h3>
+                    <p>Instant localized calculations with transparent risk metrics and actionable insights.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Predictor Workspace -->
+        <section class="predictor-section" id="predictor">
+            <div class="workspace-grid">
+                
+                <!-- Left Column: Form -->
+                <div class="glass-card form-container-card">
+                    <div class="card-header">
+                        <h2>Application Parameters</h2>
+                        <p>Fill out the applicant's details below to begin assessment.</p>
+                    </div>
+                    
+                    <form id="prediction-form" class="prediction-form">
+                        
+                        <!-- Row 1: Profile -->
+                        <div class="form-row count-3">
+                            <div class="form-group">
+                                <label for="no_of_dependents">Dependents</label>
+                                <input type="number" id="no_of_dependents" name="no_of_dependents" placeholder="0" min="0" max="10" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="education">Education</label>
+                                <select id="education" name="education" required>
+                                    <option value="Graduate">Graduate</option>
+                                    <option value="Not Graduate">Not Graduate</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="self_employed">Self Employed</label>
+                                <select id="self_employed" name="self_employed" required>
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Income & Terms -->
+                        <div class="form-row count-3">
+                            <div class="form-group">
+                                <label for="income_annum">Annual Income ($)</label>
+                                <input type="number" id="income_annum" name="income_annum" placeholder="e.g. 5000000" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loan_amount">Loan Amount ($)</label>
+                                <input type="number" id="loan_amount" name="loan_amount" placeholder="e.g. 15000000" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loan_term">Term (Months)</label>
+                                <input type="number" id="loan_term" name="loan_term" placeholder="e.g. 120" min="1" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Credit Rating -->
+                        <div class="form-row single-field">
+                            <div class="form-group slider-group">
+                                <div class="slider-header">
+                                    <label for="cibil_score">CIBIL Credit Score</label>
+                                    <span class="slider-value" id="cibil-display">700</span>
+                                </div>
+                                <input type="range" id="cibil_score" name="cibil_score" min="300" max="900" value="700" step="1">
+                                <div class="slider-labels">
+                                    <span>Poor (300)</span>
+                                    <span>Average</span>
+                                    <span>Good</span>
+                                    <span>Excellent (900)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Asset Portfolio -->
+                        <h4 class="section-divider-title">Asset Valuation Details</h4>
+                        <div class="form-row count-2">
+                            <div class="form-group">
+                                <label for="residential_assets_value">Residential Assets ($)</label>
+                                <input type="number" id="residential_assets_value" name="residential_assets_value" placeholder="e.g. 2000000" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="commercial_assets_value">Commercial Assets ($)</label>
+                                <input type="number" id="commercial_assets_value" name="commercial_assets_value" placeholder="e.g. 5000000" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-row count-2">
+                            <div class="form-group">
+                                <label for="luxury_assets_value">Luxury Assets ($)</label>
+                                <input type="number" id="luxury_assets_value" name="luxury_assets_value" placeholder="e.g. 10000000" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bank_asset_value">Bank Liquid Assets ($)</label>
+                                <input type="number" id="bank_asset_value" name="bank_asset_value" placeholder="e.g. 4000000" min="0" required>
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text">Analyze Approval Probability</span>
+                            <span class="btn-loader-spinner hidden"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Results & Dashboard -->
+                <div class="glass-card result-container-card" id="result-placeholder">
+                    <div class="result-placeholder-content">
+                        <div class="placeholder-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        </div>
+                        <h3>Awaiting Analysis</h3>
+                        <p>Fill out the profile, assets, and income fields to run the predictive algorithm and view real-time risk levels.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card result-container-card result-card hidden" id="result-display">
+                    <!-- Status Header -->
+                    <div class="result-header">
+                        <div class="result-badge" id="decision-badge">Approved</div>
+                        <h2>Risk Assessment Dashboard</h2>
+                    </div>
+
+                    <!-- Progress Visualization -->
+                    <div class="visualization-block">
+                        <div class="circular-progress-wrapper">
+                            <svg class="progress-ring" width="140" height="140">
+                                <circle class="progress-ring-bg" stroke="rgba(255, 255, 255, 0.05)" stroke-width="10" fill="transparent" r="55" cx="70" cy="70"/>
+                                <circle class="progress-ring-indicator" id="progress-indicator" stroke-width="10" fill="transparent" r="55" cx="70" cy="70"/>
+                            </svg>
+                            <div class="progress-ring-content">
+                                <span class="progress-percent" id="probability-display">97%</span>
+                                <span class="progress-label">Confidence</span>
+                            </div>
+                        </div>
+                        <div class="score-desc">
+                            <h3 id="risk-header-title">Very Low Approval Risk</h3>
+                            <p id="risk-header-desc">This applicant exhibits excellent financial backing and history, resulting in a high score.</p>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Indicators Grid -->
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-label">Loan-to-Income</span>
+                            <span class="metric-val" id="lti-display">29.9%</span>
+                            <span class="metric-caption">Debt Ratio</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">Asset Coverage</span>
+                            <span class="metric-val" id="asset-display">2.34x</span>
+                            <span class="metric-caption">Secured Multiplier</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">CIBIL Class</span>
+                            <span class="metric-val" id="cibil-class-display">Excellent</span>
+                            <span class="metric-caption">Credit Rating</span>
+                        </div>
+                    </div>
+
+                    <!-- Explanatory Breakdown -->
+                    <div class="recommendations-box">
+                        <h3>LuxeLoan Recommendation</h3>
+                        <ul class="recom-list" id="recom-list">
+                            <li>Applicant credit score is within top-tier bounds, indicating exceptional repayment history.</li>
+                            <li>Total asset pool sufficiently mitigates default risk and covers loan principal multiple times.</li>
+                            <li>Recommended Action: Proceed with standard automated loan approval.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 LuxeLoan AI. Powered by Scikit-Learn Random Forest Pipeline.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
