@@ -1,6 +1,6 @@
 import requests
 
-url = "http://127.0.0.1:8001/api/predict"
+url = "http://127.0.0.1:8000/api/predict"
 payload = {
     "no_of_dependents": 2,
     "education": "Graduate",
